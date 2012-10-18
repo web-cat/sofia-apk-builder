@@ -1,0 +1,18 @@
+.row
+  .span12
+    %h1.page-header Sofia APK Builder
+    %form.form-horizontal{ :action => url('/build'), :method => 'post', :enctype => 'multipart/form-data' }
+      .control-group
+        %label.control-label(for="pid") Virginia Tech PID
+        .controls
+          %input(type="text" name="pid" id="pid")
+      .control-group
+        %label.control-label(for="password") Password
+        .controls
+          %input(type="password" name="password" id="password")
+      .control-group
+        %label.control-label(for="file") Sofia Project (ZIP file)
+        .controls
+          %input(type="file" name="file" id="file")
+      .form-actions
+        %input(type="submit" id="build_submit" class="btn btn-primary" data-loading-text="Building..." value="Create Android App (APK)")

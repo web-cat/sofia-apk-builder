@@ -1,0 +1,5 @@
+development:
+  android_sdk_path: /Applications/Android SDK
+
+production:
+  android_sdk_path: /usr/local/android

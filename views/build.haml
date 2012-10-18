@@ -1,0 +1,12 @@
+.row
+  .span12
+    %h1.page-header Build Results
+    %p
+      %a{:href => url("/download/#{@pid}"), :class => 'btn btn-success'}
+        Download your APK
+    - unless @build_output.empty?
+      %pre.alert.alert-info
+        = @build_output
+    - unless @build_errors.empty?
+      %pre.alert.alert-danger
+        = @build_errors
