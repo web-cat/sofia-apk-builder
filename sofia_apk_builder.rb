@@ -190,44 +190,6 @@ class SofiaAPKBuilder < Sinatra::Base
   end
 
 
-#def read_files(source_dir)
-#	targetdir = File.join(source_dir, "src", "sofia", "micro", "wombats")
-#
-#	old_path = Dir.pwd
-#	dest = File.join(source_dir, "/.")
-#	Dir.chdir(dest)
-#	files = Dir["*.java"]
-#	Dir["*java"].each { |file|
-#		filepath = "#{source_dir}\\#{file}"
-#		targetdir = File.join(targetdir, "#{file}")
-#		FileUtils.mkdir_p(targetdir)
-#		FileUtils.cp(filepath, targetdir)
-#		puts("#{filepath}")
-#	}
-#	Dir.chdir(old_path)
-#end
-#
-#def copy_source_files( source_dir)
-#	targetdir = File.join(source_dir, "src", "sofia", "micro", "wombats")
-#	#targetdir = "storage/#{pid}/build/src/sofia/micro/wombats"
-#	Dir.foreach(source_dir){
-#		|f|
-#		target = "#{targetdir}\\#{f}"
-#		filepath = "#{source_dir}\\#{f}"
-#		    next if filepath =~ '/^\.\.java$/'
-#		  	 if !(File.directory?(filepath)) then
-#			   if File.exist?("#{targetdir}\\#{f}") then
-#			      puts("#{f} already exists in target directory" )
-#			   else
-#			      FileUtils.cp_r(filepath, target)
-#			      puts("Copying...#{filepath}") 
-#			   end
-#		    end
-#		
-#		}
-# end
-
-
   # ---------------------------------------------------------------
   # Recursively checks the directory for .java files and temporarily 
   # places them in a temporary directory 
